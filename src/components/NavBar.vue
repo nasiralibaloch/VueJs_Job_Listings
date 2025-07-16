@@ -1,6 +1,11 @@
 <script setup>
 import logo from "@/assets/img/logo.png";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
+
+const isActiveLink = (routePath) => {
+  const route = useRoute();
+  return route.path === routePath
+};
 </script>
 
 <template>
@@ -23,7 +28,7 @@ import { RouterLink } from "vue-router";
                 to="/"
                 class="text-white bg-green-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >Home</RouterLink
-              > 
+              >
               <RouterLink
                 to="/jobs"
                 class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
