@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Senior Vue Developer",
       "type": "Full-Time",
       "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as Vue or Angular.",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Front-End Engineer (Vue)",
       "type": "Full-Time",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Vue.js Developer",
       "type": "Full-Time",
       "description": "Are you passionate about front-end development? Join our team in vibrant Brooklyn, NY, and work on exciting projects that make a difference. We offer competitive compensation and a collaborative work environment where your ideas are valued.",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Vue Front-End Developer",
       "type": "Part-Time",
       "description": "Join our team as a Part-Time Front-End Developer in beautiful Pheonix, AZ. We are looking for a self-motivated individual with a passion for creating engaging user experiences. This position offers flexible hours and the opportunity to work remotely.",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Full Stack Vue Developer",
       "type": "Full-Time",
       "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Vue Native Developer",
       "type": "Full-Time",
       "description": "Join our team as a Front-End Developer in beautiful Portland, OR. We are looking for a skilled and enthusiastic individual to help us create innovative web solutions. Competitive salary and great benefits package available.",
@@ -82,6 +82,62 @@
         "description": "Port Solutions is a leading technology company specializing in software development and digital marketing. We are committed to providing our clients with cutting-edge solutions and our employees with a supportive and rewarding work environment.",
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "6090",
+      "title": "Nihil maiores omnis ",
+      "type": "Internship",
+      "location": "Molestiae itaque ut ",
+      "description": "Maxime in adipisicin",
+      "salary": "$70K - $80K",
+      "company": {
+        "name": "Do dolor quia obcaec",
+        "description": "Aspernatur ipsum ad",
+        "contactEmail": "niredido@mailinator.com",
+        "contactPhone": "+1 (604) 486-6803"
+      }
+    },
+    {
+      "id": "cd2e",
+      "title": "Amet duis quos plac",
+      "type": "Part-Time",
+      "location": "Sint odit at saepe q",
+      "description": "Est cupiditate tenet",
+      "salary": "$175K - $200K",
+      "company": {
+        "name": "Laboris culpa in ve",
+        "description": "Dolorem ut in consec",
+        "contactEmail": "herafu@mailinator.com",
+        "contactPhone": "+1 (638) 294-1341"
+      }
+    },
+    {
+      "id": "2fcd",
+      "title": "Qui distinctio Exer",
+      "type": "Internship",
+      "location": "Temporibus dolore li",
+      "description": "Magni eius consectet",
+      "salary": "Over $200K",
+      "company": {
+        "name": "Qui hic pariatur Et",
+        "description": "Omnis officiis sint",
+        "contactEmail": "lavowomida@mailinator.com",
+        "contactPhone": "+1 (178) 234-4923"
+      }
+    },
+    {
+      "id": "5211",
+      "title": "Id minus quia et exc",
+      "type": "Remote",
+      "location": "Accusantium quia in ",
+      "description": "Autem autem dolor om",
+      "salary": "$150K - $175K",
+      "company": {
+        "name": "Sed recusandae Et v",
+        "description": "Voluptatem aute numq",
+        "contactEmail": "rabice@mailinator.com",
+        "contactPhone": "+1 (418) 197-2721"
       }
     }
   ]

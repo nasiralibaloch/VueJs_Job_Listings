@@ -1,27 +1,48 @@
 <script setup>
-import PulseLoader from "vue-spinner/src/PulseLoader.vue";
-import { reactive, onMounted } from "vue";
-import { useRoute } from "vue-router";
-import { RouterLink } from "vue-router";
-import axios from "axios";
-import BackButton from "@/components/BackButton.vue";
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+import BackButton from '@/components/BackButton.vue';
+import { reactive, onMounted } from 'vue';
+import { useRoute, RouterLink, useRouter } from 'vue-router';
+import { useToast } from 'vue-toastification';
+import axios from 'axios';
+
 const route = useRoute();
+const router = useRouter();
+const toast = useToast();
+
 const jobId = route.params.id;
+
 const state = reactive({
   job: {},
   isLoading: true,
 });
+
+const deleteJob = async () => {
+  try {
+    const confirm = window.confirm('Are you sure you want to delete this job?');
+    if (confirm) {
+      await axios.delete(`/http://localhost:8000/jobs/${jobId}`);
+      toast.success('Job Deleted Successfully');
+      router.push('/jobs');
+    }
+  } catch (error) {
+    console.error('Error deleting job', error);
+    toast.error('Job Not Deleted');
+  }
+};
+
 onMounted(async () => {
   try {
-    const response = await axios.get(`api/jobs/${jobId}`);
-    state.job = await response.data;
+    const response = await axios.get(`/api/jobs/${jobId}`);
+    state.job = response.data;
   } catch (error) {
-    console.error("error fetching jobs", error);
+    console.error('Error fetching job', error);
   } finally {
     state.isLoading = false;
   }
 });
 </script>
+
 <template>
   <BackButton />
   <section v-if="!state.isLoading" class="bg-green-50">
@@ -36,9 +57,7 @@ onMounted(async () => {
             <div
               class="text-gray-500 mb-4 flex align-middle justify-center md:justify-start"
             >
-              <i
-                class="fa-solid fa-location-dot text-lg text-orange-700 mr-2"
-              ></i>
+              <i class="pi pi-map-marker text-xl text-orange-700 mr-2"></i>
               <p class="text-orange-700">{{ state.job.location }}</p>
             </div>
           </div>
@@ -54,7 +73,7 @@ onMounted(async () => {
 
             <h3 class="text-green-800 text-lg font-bold mb-2">Salary</h3>
 
-            <p class="mb-4">{{ state.job.salary }} /Year</p>
+            <p class="mb-4">{{ state.job.salary }} / Year</p>
           </div>
         </main>
 
@@ -94,6 +113,7 @@ onMounted(async () => {
               >Edit Job</RouterLink
             >
             <button
+              @click="deleteJob"
               class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
             >
               Delete Job
@@ -103,6 +123,7 @@ onMounted(async () => {
       </div>
     </div>
   </section>
+
   <div v-else class="text-center text-gray-500 py-6">
     <PulseLoader />
   </div>
